@@ -1,0 +1,20 @@
+[project]
+name = "terminologist"
+version = "0.1.0"
+description = "Django test project"
+readme = "README.md"
+requires-python = "==3.14.*"
+dependencies = [
+    "django==6.1.1",
+    "python-decouple==3.8",
+    # API
+    "djangorestframework==3.18.1",
+    "drf-spectacular==0.30.0",
+    "drf-standardized-errors==0.16.0",
+]
+
+[dependency-groups]
+dev = [
+    "django-debug-toolbar==8.0.0",
+    "ruff==0.16.9",
+]
