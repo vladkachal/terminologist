@@ -30,6 +30,12 @@ class RefBookQuerySet(models.QuerySet["RefBook"]):
             )
         )
 
+    def current(self, as_of: date) -> Self:
+        return self.filter(
+            versions__start_date__isnull=False,
+            versions__start_date__lte=as_of,
+        ).distinct()
+
 
 class RefBookManager(models.Manager.from_queryset(RefBookQuerySet)):
     pass
@@ -39,6 +45,9 @@ class RefBookVersionQuerySet(models.QuerySet["RefBookVersion"]):
     def current(self, as_of: date | None = None) -> Self:
         as_of = as_of or timezone.localdate()
         return self.filter(start_date__isnull=False, start_date__lte=as_of)
+
+    def latest_current(self, as_of: date | None = None) -> RefBookVersion | None:
+        return self.current(as_of).order_by("-start_date", "-pk").first()
 
     def with_refbook(self) -> Self:
         return self.select_related("refbook")
