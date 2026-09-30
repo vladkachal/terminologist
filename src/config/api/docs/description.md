@@ -1,18 +1,20 @@
-## Overview
+## Обзор
 
-Refer to the individual endpoints for more details on usage and expected
-request/response formats.
+Описание отдельных эндпоинтов с подробной информацией об их использовании
+и ожидаемых форматах запросов и ответов.
 
-## Errors
+## Ошибки
 
 <details>
-<summary><small>A list of error responses that may appear in every operation.</small></summary>
+<summary><small>
+    Список ответов с ошибками, которые могут возникнуть при выполнении любой операции.
+</small></summary>
 
 ### 405 Method Not Allowed
 
-This is returned when an endpoint is called with an unexpected http method.
-For example, if updating a user requires a `POST` request and a `PATCH` is issued
-instead, this error is returned. Here's how it looks like:
+Возвращается, когда эндпоинт вызывается с неподдерживаемым `HTTP-методом`.
+Например, если для обновления пользователя требуется запрос `POST`,
+а отправляется `PATCH`, возвращается следующая ошибка:
 
 ```json
 {
@@ -29,8 +31,8 @@ instead, this error is returned. Here's how it looks like:
 
 ### 406 Not Acceptable
 
-This is returned if the `Accept` header is submitted and contains a value other
-than `application/json`. Here's how the response would look:
+Возвращается, если передан заголовок `Accept`, содержащий значение,
+отличное от `application/json`. Ответ выглядит следующим образом:
 
 ```json
 {
@@ -47,8 +49,7 @@ than `application/json`. Here's how the response would look:
 
 ### 415 Unsupported Media Type
 
-This is returned when the request content type is not `json`.
-Here's how the response would look:
+Возвращается, когда тип содержимого запроса не является `json`.
 
 ```json
 {
@@ -65,8 +66,7 @@ Here's how the response would look:
 
 ### 500 Internal Server Error
 
-This is returned when the API server encounters an unexpected error.
-Here's how the response would look:
+Возвращается, когда на сервере API возникает непредвиденная ошибка.
 
 ```json
 {
@@ -83,8 +83,7 @@ Here's how the response would look:
 
 ### 503 Service Temporarily Unavailable
 
-This is returned when the API server is not ready to handle the request.
-Here's how the response would look:
+Возвращается, когда сервер API не готов обрабатывать запросы.
 
 ```json
 {
