@@ -63,8 +63,16 @@ class RefBookVersionMixin(APIView):
         return version
 
     @staticmethod
-    def get_latest_version(refbook: RefBook) -> RefBookVersion:
-        version = RefBookVersion.objects.filter(refbook=refbook).latest_current()
+    def get_latest_version(
+        refbook: RefBook,
+        *,
+        with_elements: bool = False,
+    ) -> RefBookVersion:
+        version = (
+            RefBookVersion.objects
+            .filter(refbook=refbook)
+            .latest_current(with_elements=with_elements)
+        )
         if version is None:
             raise NotFound(
                 detail="У справочника отсутствует актуальная версия.",  # noqa: RUF001
@@ -84,10 +92,7 @@ class RefBookElementListAPIView(RefBookVersionMixin, APIView):
         if version_number is not None:
             version = self.get_version(refbook, version_number)
         else:
-            version = self.get_latest_version(refbook)
-            version = (
-                RefBookVersion.objects.filter(pk=version.pk).with_elements().first()
-            )
+            version = self.get_latest_version(refbook, with_elements=True)
 
         serializer = RefBookElementListSerializer(version.elements.all(), many=True)
         return Response({"elements": serializer.data}, status=status.HTTP_200_OK)

@@ -46,8 +46,16 @@ class RefBookVersionQuerySet(models.QuerySet["RefBookVersion"]):
         as_of = as_of or timezone.localdate()
         return self.filter(start_date__isnull=False, start_date__lte=as_of)
 
-    def latest_current(self, as_of: date | None = None) -> RefBookVersion | None:
-        return self.current(as_of).order_by("-start_date", "-pk").first()
+    def latest_current(
+        self,
+        as_of: date | None = None,
+        *,
+        with_elements: bool = False,
+    ) -> RefBookVersion | None:
+        queryset = self.current(as_of).order_by("-start_date", "-pk")
+        if with_elements:
+            queryset = queryset.with_elements()
+        return queryset.first()
 
     def with_refbook(self) -> Self:
         return self.select_related("refbook")
