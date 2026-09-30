@@ -1,0 +1,461 @@
+[
+    {
+        "model": "terminology.refbook",
+        "pk": 1,
+        "fields": {
+            "code": "MS1",
+            "name": "Специальности медицинских работников",
+            "description": "Справочник специальностей медицинских работников."
+        }
+    },
+    {
+        "model": "terminology.refbook",
+        "pk": 2,
+        "fields": {
+            "code": "ICD-10",
+            "name": "Международная классификация болезней, 10-й пересмотр",
+            "description": "Коды заболеваний по МКБ-10."
+        }
+    },
+    {
+        "model": "terminology.refbook",
+        "pk": 3,
+        "fields": {
+            "code": "COUNTRY",
+            "name": "Страны мира",
+            "description": "Справочник стран."
+        }
+    },
+    {
+        "model": "terminology.refbook",
+        "pk": 4,
+        "fields": {
+            "code": "GENDER",
+            "name": "Пол",
+            "description": "Справочник значений пола."
+        }
+    },
+    {
+        "model": "terminology.refbook",
+        "pk": 5,
+        "fields": {
+            "code": "BLOOD-GROUP",
+            "name": "Группы крови",
+            "description": "Группы крови и резус-фактор."
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 1,
+        "fields": {
+            "refbook": 1,
+            "version": "1.0",
+            "start_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 2,
+        "fields": {
+            "refbook": 1,
+            "version": "2.0",
+            "start_date": "2023-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 3,
+        "fields": {
+            "refbook": 1,
+            "version": "3.0",
+            "start_date": "2025-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 4,
+        "fields": {
+            "refbook": 2,
+            "version": "2022",
+            "start_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 5,
+        "fields": {
+            "refbook": 2,
+            "version": "2024",
+            "start_date": "2024-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 6,
+        "fields": {
+            "refbook": 3,
+            "version": "1.0",
+            "start_date": "2020-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 7,
+        "fields": {
+            "refbook": 3,
+            "version": "2.0",
+            "start_date": "2024-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 8,
+        "fields": {
+            "refbook": 4,
+            "version": "1.0",
+            "start_date": "2020-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookversion",
+        "pk": 9,
+        "fields": {
+            "refbook": 5,
+            "version": "1.0",
+            "start_date": "2020-01-01"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 1,
+        "fields": {
+            "version": 1,
+            "code": "1",
+            "value": "Врач-терапевт"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 2,
+        "fields": {
+            "version": 1,
+            "code": "2",
+            "value": "Травматолог-ортопед"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 3,
+        "fields": {
+            "version": 1,
+            "code": "3",
+            "value": "Хирург"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 4,
+        "fields": {
+            "version": 2,
+            "code": "1",
+            "value": "Врач-терапевт"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 5,
+        "fields": {
+            "version": 2,
+            "code": "2",
+            "value": "Травматолог-ортопед"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 6,
+        "fields": {
+            "version": 2,
+            "code": "3",
+            "value": "Хирург"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 7,
+        "fields": {
+            "version": 2,
+            "code": "4",
+            "value": "Кардиолог"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 8,
+        "fields": {
+            "version": 3,
+            "code": "1",
+            "value": "Врач-терапевт"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 9,
+        "fields": {
+            "version": 3,
+            "code": "2",
+            "value": "Травматолог-ортопед"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 10,
+        "fields": {
+            "version": 3,
+            "code": "3",
+            "value": "Хирург"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 11,
+        "fields": {
+            "version": 3,
+            "code": "4",
+            "value": "Кардиолог"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 12,
+        "fields": {
+            "version": 3,
+            "code": "5",
+            "value": "Невролог"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 13,
+        "fields": {
+            "version": 4,
+            "code": "J00",
+            "value": "Острый назофарингит"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 14,
+        "fields": {
+            "version": 4,
+            "code": "J01",
+            "value": "Острый синусит"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 15,
+        "fields": {
+            "version": 4,
+            "code": "S99",
+            "value": "Другие и неуточнённые травмы голеностопного сустава и стопы"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 16,
+        "fields": {
+            "version": 5,
+            "code": "J00",
+            "value": "Острый назофарингит"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 17,
+        "fields": {
+            "version": 5,
+            "code": "J01",
+            "value": "Острый синусит"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 18,
+        "fields": {
+            "version": 5,
+            "code": "S99",
+            "value": "Другие и неуточнённые травмы голеностопного сустава и стопы"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 19,
+        "fields": {
+            "version": 5,
+            "code": "M54.5",
+            "value": "Боль внизу спины"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 20,
+        "fields": {
+            "version": 6,
+            "code": "RU",
+            "value": "Россия"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 21,
+        "fields": {
+            "version": 6,
+            "code": "DE",
+            "value": "Германия"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 22,
+        "fields": {
+            "version": 6,
+            "code": "FR",
+            "value": "Франция"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 23,
+        "fields": {
+            "version": 7,
+            "code": "RU",
+            "value": "Россия"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 24,
+        "fields": {
+            "version": 7,
+            "code": "DE",
+            "value": "Германия"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 25,
+        "fields": {
+            "version": 7,
+            "code": "FR",
+            "value": "Франция"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 26,
+        "fields": {
+            "version": 7,
+            "code": "KZ",
+            "value": "Казахстан"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 27,
+        "fields": {
+            "version": 8,
+            "code": "M",
+            "value": "Мужской"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 28,
+        "fields": {
+            "version": 8,
+            "code": "F",
+            "value": "Женский"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 29,
+        "fields": {
+            "version": 8,
+            "code": "U",
+            "value": "Не указан"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 30,
+        "fields": {
+            "version": 9,
+            "code": "O_POS",
+            "value": "O(I) Rh+"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 31,
+        "fields": {
+            "version": 9,
+            "code": "O_NEG",
+            "value": "O(I) Rh−"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 32,
+        "fields": {
+            "version": 9,
+            "code": "A_POS",
+            "value": "A(II) Rh+"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 33,
+        "fields": {
+            "version": 9,
+            "code": "A_NEG",
+            "value": "A(II) Rh−"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 34,
+        "fields": {
+            "version": 9,
+            "code": "B_POS",
+            "value": "B(III) Rh+"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 35,
+        "fields": {
+            "version": 9,
+            "code": "B_NEG",
+            "value": "B(III) Rh−"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 36,
+        "fields": {
+            "version": 9,
+            "code": "AB_POS",
+            "value": "AB(IV) Rh+"
+        }
+    },
+    {
+        "model": "terminology.refbookelement",
+        "pk": 37,
+        "fields": {
+            "version": 9,
+            "code": "AB_NEG",
+            "value": "AB(IV) Rh−"
+        }
+    }
+]

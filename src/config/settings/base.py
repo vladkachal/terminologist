@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "drf_standardized_errors",
     # Local apps
+    "apps.terminology",
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
