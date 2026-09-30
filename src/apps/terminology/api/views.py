@@ -75,7 +75,7 @@ class RefBookVersionMixin(APIView):
         )
         if version is None:
             raise NotFound(
-                detail="У справочника отсутствует актуальная версия.",  # noqa: RUF001
+                detail="У справочника отсутствует актуальная версия.",
                 code="latest_version_not_found",
             )
         return version

@@ -16,7 +16,7 @@ class RefBookListQuerySerializer(serializers.Serializer):
         required=False,
         input_formats=("%Y-%m-%d",),
         error_messages={
-            "invalid": "Параметр 'date' должен быть в формате ГГГГ-ММ-ДД.",  # noqa RUF001
+            "invalid": "Параметр 'date' должен быть в формате ГГГГ-ММ-ДД.",
         },
     )
 
